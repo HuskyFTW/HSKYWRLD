@@ -2,8 +2,22 @@ site_name: HSKY WRLD
 site_description: Knowledge Database of HSKY
 repo_name: HuskyFTW
 nav:
-  - Getting Started: index.md
-  - Install: install.md
-  - Full Example: example.md
+  - Github:
+    - Github Push: Github push.md
+  - Test:
+    - Getting Started: index.md
+    - Install: install.md
+    - Full Example: example.md
 theme:
-   name: 'material'
+  name: material
+  logo: logo.png
+  palette:
+    primary: 'black'
+    accent: 'gold'
+  feature:
+    masks:
+      cover: false
+
+
+extra_css:
+  - custom.css
