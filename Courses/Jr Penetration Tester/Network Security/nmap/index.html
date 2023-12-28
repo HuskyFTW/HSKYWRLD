@@ -185,6 +185,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/amandaguglieri/hackinglife" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HuskyFTW/HSKYWRLD
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -217,6 +229,18 @@
     </a>
     HSKY WRLD
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/amandaguglieri/hackinglife" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HuskyFTW/HSKYWRLD
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -648,6 +672,9 @@
                 
                   
 
+  
+  
+
 
 <h1 id="nmap-host-discovery-commands">Nmap Host Discovery Commands</h1>
 <p>You have learned how ARP, ICMP, TCP, and UDP can detect live hosts by completing this room. Any response from a host is an indication that it is online. Below is a quick summary of the command-line options for Nmap that we have covered.</p>
@@ -786,6 +813,171 @@
 </tbody>
 </table>
 <p>Ensure you understand these options for effective Nmap scanning. To continue learning about Nmap, consider joining the room "Nmap Basic Port Scans," which introduces the basic types of port scans.</p>
+<h1 id="nmap-advanced-port-scans">Nmap Advanced Port Scans</h1>
+<h2 id="port-scan-types-and-example-commands_1">Port Scan Types and Example Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Port Scan Type</th>
+<th>Example Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP Null Scan</td>
+<td><code>sudo nmap -sN MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>TCP FIN Scan</td>
+<td><code>sudo nmap -sF MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>TCP Xmas Scan</td>
+<td><code>sudo nmap -sX MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>TCP Maimon Scan</td>
+<td><code>sudo nmap -sM MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>TCP ACK Scan</td>
+<td><code>sudo nmap -sA MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>TCP Window Scan</td>
+<td><code>sudo nmap -sW MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>Custom TCP Scan</td>
+<td><code>sudo nmap --scanflags URGACKPSHRSTSYNFIN MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>Spoofed Source IP</td>
+<td><code>sudo nmap -S SPOOFED_IP MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>Spoofed MAC Address</td>
+<td><code>sudo nmap --spoof-mac SPOOFED_MAC MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>Decoy Scan</td>
+<td><code>nmap -D DECOY_IP,ME MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>Idle (Zombie) Scan</td>
+<td><code>sudo nmap -sI ZOMBIE_IP MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>Fragment IP (8 bytes)</td>
+<td><code>nmap -f MACHINE_IP</code></td>
+</tr>
+<tr>
+<td>Fragment IP (16 bytes)</td>
+<td><code>nmap -ff MACHINE_IP</code></td>
+</tr>
+</tbody>
+</table>
+<p>These scan types rely on setting TCP flags in unexpected ways to prompt ports for a reply. Null, FIN, and Xmas scans provoke a response from closed ports, while Maimon, ACK, and Window scans provoke a response from open and closed ports.</p>
+<h2 id="nmap-options_1">Nmap Options</h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--source-port PORT_NUM</td>
+<td>Specify source port number</td>
+</tr>
+<tr>
+<td>--data-length NUM</td>
+<td>Append random data to reach given length</td>
+</tr>
+<tr>
+<td>--reason</td>
+<td>Explain how Nmap made its conclusion</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>Verbose</td>
+</tr>
+<tr>
+<td>-vv</td>
+<td>Very verbose</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>Debugging</td>
+</tr>
+<tr>
+<td>-dd</td>
+<td>More details for debugging</td>
+</tr>
+</tbody>
+</table>
+<h2 id="nmap-post-port-scans">Nmap Post Port Scans</h2>
+<h3 id="option-meanings">Option Meanings</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-sV</td>
+<td>Determine service/version info on open ports</td>
+</tr>
+<tr>
+<td>-sV --version-light</td>
+<td>Try the most likely probes (2)</td>
+</tr>
+<tr>
+<td>-sV --version-all</td>
+<td>Try all available probes (9)</td>
+</tr>
+<tr>
+<td>-O</td>
+<td>Detect the operating system</td>
+</tr>
+<tr>
+<td>--traceroute</td>
+<td>Run traceroute to the target</td>
+</tr>
+<tr>
+<td>--script=SCRIPTS</td>
+<td>Nmap scripts to run</td>
+</tr>
+<tr>
+<td>-sC or --script=default</td>
+<td>Run default scripts</td>
+</tr>
+<tr>
+<td>-A</td>
+<td>Equivalent to -sV -O -sC --traceroute</td>
+</tr>
+<tr>
+<td>-oN</td>
+<td>Save output in normal format</td>
+</tr>
+<tr>
+<td>-oG</td>
+<td>Save output in grepable format</td>
+</tr>
+<tr>
+<td>-oX</td>
+<td>Save output in XML format</td>
+</tr>
+<tr>
+<td>-oA</td>
+<td>Save output in normal, XML, and Grepable formats</td>
+</tr>
+</tbody>
+</table>
+<p>These options are used after conducting port scans to gather additional information, such as service/version details, operating system detection, traceroute results, and the execution of Nmap scripts for more advanced analysis.</p>
 
 
 
