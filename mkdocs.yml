@@ -2,22 +2,42 @@ site_name: HSKY WRLD
 site_description: Knowledge Database of HSKY
 repo_name: HuskyFTW
 nav:
-  - Github:
-    - Github Push: Github push.md
-  - Test:
-    - Getting Started: index.md
-    - Install: install.md
-    - Full Example: example.md
+  - Home: index.md
+  - Courses & Certificates:
+    - TryHackMe: 
+      - Jr Penetration Tester: 
+        - Nmap: Courses/Jr Penetration Tester/Network Security/nmap.md
+  - Utility:
+    - Python: Python/python.md
+    - Github:
+      - Github Push: Github/Github push.md
 theme:
   name: material
   logo: logo.png
-  palette:
-    primary: 'black'
-    accent: 'gold'
+  extra_css:
+  - stylesheets/extra.css
   feature:
     masks:
       cover: false
 
+  palette:
+    # Light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: 'teal'
+      accent: 'amber'
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
 
-extra_css:
-  - custom.css
+    # Dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: 'amber'
+      accent: 'amber'
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+    
+

@@ -1,7 +1,4 @@
 
-
-
-
 # GitHub Push
 
 This document provides a step-by-step guide on how to push changes to your GitHub repository.
