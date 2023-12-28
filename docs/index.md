@@ -1,6 +1,6 @@
 # Welcome to HSKY WRLD Documentation
 
-<span style="border-bottom: 2px solid #FFD700;">**HSKY WRLD**</span> is a space dedicated to the exploration and organization of thoughts, techniques, and insights, with a primary focus on the realms of cybersecurity. Here, you'll find a structured collection of knowledge designed to guide you through the intricacies of securing digital environments, mastering cybersecurity practices, and staying updated on the latest trends. Beyond the technical aspects, HSKY WRLD also strives to extend its reach into personal development, offering life guidance and strategies to enhance your overall well-being.
+<span style="border-bottom: 2px solid #FFD700;">**HSKYl WRLD**</span> is a space dedicated to the exploration and organization of thoughts, techniques, and insights, with a primary focus on the realms of cybersecurity. Here, you'll find a structured collection of knowledge designed to guide you through the intricacies of securing digital environments, mastering cybersecurity practices, and staying updated on the latest trends. Beyond the technical aspects, HSKY WRLD also strives to extend its reach into personal development, offering life guidance and strategies to enhance your overall well-being.
 
 ## Embracing Collective Wisdom
 
